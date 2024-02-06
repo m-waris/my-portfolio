@@ -31,6 +31,7 @@ const Certificates = () => {
         {certificatesData.map((certificate, i) => {
           return ( 
                 <Image
+                key={i}
                   src={certificate.imageUrl}
                   alt={certificate.title}
                   width={3000}
