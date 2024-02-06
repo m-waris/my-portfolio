@@ -26,7 +26,6 @@ export default function Skills() {
 
         scrollerContent?.forEach((item) => {
           const duplicatedItem = item.cloneNode(true);
-          duplicatedItem.setAttribute("aria-hidden", true);
           scrollerInner?.appendChild(duplicatedItem);
         });
       });
