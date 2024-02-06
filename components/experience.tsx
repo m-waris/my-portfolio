@@ -10,16 +10,18 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import { FaCircle, FaCode, FaStar } from "react-icons/fa";
+import { Fa0, FaCircleDot, FaComputer } from "react-icons/fa6";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experiance");
   const { theme } = useTheme();
 
   return (
-    <section id="experiance" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+    <section id="experiance" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40 ">
       <SectionHeading>My experience</SectionHeading>
       <VerticalTimeline lineColor="">
-        {experiencesData.map((item, index) => (
+        {experiencesData.map((item, index) => ( 
           <React.Fragment key={index}>
             <VerticalTimelineElement
               contentStyle={{
@@ -37,7 +39,7 @@ export default function Experience() {
                     : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
-              icon={item.icon}
+              icon={<FaCircleDot />}
               iconStyle={{
                 background:
                   theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
@@ -49,7 +51,7 @@ export default function Experience() {
                 <p className="font-normal !mt-0">{item.location}</p> <span>•</span>
                 <p className=" !mt-0">{item.company}</p>
               </div>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+              <p className="!mt-1 !font-normal  text-gray-700 dark:text-white/75">
                 {item.description}
               </p>
             </VerticalTimelineElement>

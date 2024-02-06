@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef } from "react";
+
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -12,22 +13,27 @@ export default function Project({
   description,
   tags,
   imageUrl,
-}: ProjectProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
+}: ProjectProps) 
+{
+  const [ref, inView] = useInView({
+    threshold: 0.5,
+    triggerOnce: false
   });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
+  const variants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: {
+      opacity: 0,
+      y: 50
+    }
+  };  
   return (
     <motion.div
       ref={ref}
-      style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
-      }}
+      animate={inView ? "visible" : "hidden"}
+        variants={variants}
+        exit="hidden"
+        transition={{ duration: 0.8, ease: "easeOut" }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
       <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">

@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact, FaWordpress } from "react-icons/fa";
+import { FaNodeJs, FaReact, FaWordpress } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import fastdev from "@/public/fastdev.png";
@@ -12,7 +12,7 @@ import intern from "@/public/Intern Certificate.jpg";
 import numpy from "@/public/numpy.jpg";
 import data from "@/public/Data Manipulation in SQL.jpg";
 import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import { FaCircle } from "react-icons/fa6";
 
 export const links = [
   {
@@ -42,19 +42,21 @@ export const experiencesData = [
     title: "Web Development Inter",
     location: "Remote",
     company: "FastDev Labs",
-    description:
-      "I worked as a web development intern for 3 months. I learned HTML, CSS, JavaScript, React and Next.js.",
-    icon: React.createElement(FaReact),
-    date: "2019",
+    description:"Contributed to a client project, developing and maintaining React.js front-end components. " +
+    "Implemented server-side logic and API integration using Node.js and Express.js. " +
+    "Collaborated with cross-functional teams, ensuring project delivery within deadlines. " +
+    "Acquired skills in responsive design, RESTful APIs, and MongoDB database management. ",
+
+    date: "Jul 2023 - Sep 2023",
   },
   {
-    title: "Front-End Developer Intern",
-    location: "Remote",
-    company: "Inter Pakistan",
-    description:
-      "I worked as a front-end developer intern for 3 months. I learned React, TypeScript, Tailwind and Framer Motion.",
-    icon: React.createElement(FaWordpress),
-    date: "2019 - 2021",
+    title: "Teacher Assistant",
+    location: "Faisalabad",
+    company: "FAST NUCES",
+    description:"Assisted students in understanding programming concepts. " +
+    "Conducted sessions on web development, teaching students how to build responsive websites using HTML, CSS, and JavaScript. " +
+    "Mentored students in developing web applications using React.js and Node.js. ",
+    date: "Feb 2024 - Jul 2024",
   }
 ] as const;
 
@@ -78,17 +80,24 @@ export const projectsData = [
 export const skillsData = [
   "HTML",
   "CSS",
+  "Tailwind",
+  "Bootstrap",
   "JavaScript",
-  "React",
+  "React.js",
   "Next.js",
   "Node.js",
+  "Express.js",
   "Git",
-  "Tailwind",
-  "MongoDB",
+  "Github",
   "Redux",
-  "Express",
+  "MongoDB",
+  "Firebase",
+  "SQL",
+  "MySQL",
   "PostgreSQL",
-  "Python",
+  "RESTful APIs",
+  "Responsive Design",
+
 ] as const;
 
 export const certificatesData = [
@@ -126,11 +135,6 @@ export const certificatesData = [
     title: "Numpy",
     imageUrl: numpy,
     date: "2023",
-  },
-  {
-    title: "Intern Certificate",
-    imageUrl: intern,
-    date: "2023",
-  },
+  }
 
 ] as const;

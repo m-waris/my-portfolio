@@ -36,7 +36,7 @@ export default function Header() {
               >
                 <Link
                   className={clsx(
-                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-300 dark:hover:text-gray-100",
                     {
                       "text-gray-950 dark:text-gray-100":
                         activeSection === link.name,
@@ -52,7 +52,7 @@ export default function Header() {
 
                   {link.name === activeSection && (
                     <motion.span
-                      className="bg-zinc-200 rounded-full absolute inset-0 -z-10 dark:bg-zinc-700"
+                      className="bg-zinc-200 rounded-full absolute inset-0 -z-10 dark:bg-zinc-600"
                       layoutId="activeSection"
                       transition={{
                         type: "spring",

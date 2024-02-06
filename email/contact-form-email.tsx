@@ -2,7 +2,7 @@ import React from "react";
 import {
   Html,
   Body,
-  Head,
+
   Heading,
   Hr,
   Container,
@@ -23,18 +23,18 @@ export default function ContactFormEmail({
 }: ContactFormEmailProps) {
   return (
     <Html>
-      <Head />
+   
       <Preview>New message from your portfolio site</Preview>
       <Tailwind>
-        <Body className="bg-gray-100 text-black">
+        <Body className="">
           <Container>
-            <Section className="bg-white borderBlack my-10 px-10 py-4 rounded-md">
-              <Heading className="leading-tight">
-                You received the following message from the contact form
-              </Heading>
-              <Text>{message}</Text>
+            <Section className="bg-zinc-800 text-white shadow-md borderBlack my-10 px-10 py-4 rounded-xl">
+              <Text className="leading-tight">
+                You received the following message from the contact form:
+              </Text>
+              <Text className=" text-xl">{message}</Text>
               <Hr />
-              <Text>The sender's email is: {senderEmail}</Text>
+              <Text className=" text-lg ">The sender's email is: {senderEmail}</Text>
             </Section>
           </Container>
         </Body>
