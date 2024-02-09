@@ -2,7 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaNodeJs, FaReact, FaWordpress } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
+import blogapp from "@/public/blogapp.jpeg";
+import filmiapp from "@/public/fimiapp.jpeg";
+import foodapp from "@/public/foodapp.jpeg";
 import fastdev from "@/public/fastdev.png";
 import wordpress from "@/public/wordpress.jpg";
 import react from "@/public/react.jpg";
@@ -11,7 +13,7 @@ import html from "@/public/html.jpg";
 import intern from "@/public/Intern Certificate.jpg";
 import numpy from "@/public/numpy.jpg";
 import data from "@/public/Data Manipulation in SQL.jpg";
-import rmtdevImg from "@/public/rmtdev.png";
+
 import { FaCircle } from "react-icons/fa6";
 
 export const links = [
@@ -39,6 +41,16 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Teacher Assistant",
+    location: "Faisalabad",
+    company: "FAST NUCES",
+    description:"Provided support to the instructor in the Web Engineering course. "+
+    "Offered one-on-one assistance to students to address individual learning needs and challenges. "+
+    "Graded assignments and quizzes to provide constructive feedback and track student progress. "+
+    "Collaborated closely with instructors to create a supportive and engaging learning environment",
+    date: "Feb 2024 - Present",
+  },
+  {
     title: "Web Development Inter",
     location: "Remote",
     company: "FastDev Labs",
@@ -49,31 +61,28 @@ export const experiencesData = [
 
     date: "Jul 2023 - Sep 2023",
   },
-  {
-    title: "Teacher Assistant",
-    location: "Faisalabad",
-    company: "FAST NUCES",
-    description:"Assisted students in understanding programming concepts. " +
-    "Conducted sessions on web development, teaching students how to build responsive websites using HTML, CSS, and JavaScript. " +
-    "Mentored students in developing web applications using React.js and Node.js. ",
-    date: "Feb 2024 - Jul 2024",
-  }
 ] as const;
 
 export const projectsData = [
+  {
+    title:'Full Stack Blog App',
+    description: 'A full stack blog app with features like filtering, sorting and pagination. I was the front-end developer.',
+    tags: ['NextJs', 'MongoDB', 'Tailwind', 'Express', 'Node.js','NextAuth'],
+    imageUrl: blogapp,
+  },
   {
     title: "Food Delivery App",
     description:
       "A food delivery app with features like filtering, sorting and pagination. I was the front-end developer.",
     tags: ["React", "MongoDB", "Tailwind", "Express", "Node.js"],
-    imageUrl: corpcommentImg,
+    imageUrl: foodapp,
   },
   {
     title: "Filmi App",
     description:
       " A movie api app with features like filtering, sorting and pagination. I was the front-end developer.",
     tags: ["React","Tailwind"],
-    imageUrl: rmtdevImg,
+    imageUrl: filmiapp,
   }
 ] as const;
 
