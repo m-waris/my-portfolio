@@ -19,7 +19,7 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3 text-lg text-justify">
-        I'm a from Pakistan. I am result-oriented developer with a proven track record in crafting dynamic and responsive websites. Proficient in
+        I am from Pakistan. I am result-oriented developer with a proven track record in crafting dynamic and responsive websites. Proficient in
         leveraging a diverse skill set including HTML, CSS, JavaScript, React, Node.js, and other cutting-edge technologies.
         Demonstrated expertise in designing and implementing innovative solutions that enhance user experiences. Eager to
         contribute my technical proficiency and strong communication skills to drive excellence in web development.
