@@ -66,22 +66,22 @@ export const experiencesData = [
 export const projectsData = [
   {
     title:'Full Stack Blog App',
-    description: 'A full stack blog app with features like filtering, sorting and pagination. I was the front-end developer.',
+    description: 'Blog app with features user authentication, CRUD operations for blog posts, and a responsive design using Tailwind CSS. Achieved seamless integration of front-end and back-end functionalities.',
     tags: ['NextJs', 'MongoDB', 'Tailwind', 'Express', 'Node.js','NextAuth'],
     imageUrl: blogapp,
   },
   {
     title: "Food Delivery App",
     description:
-      "A food delivery app with features like filtering, sorting and pagination. I was the front-end developer.",
+      "Developed a food delivery web application with features like user authentication, menu browsing, order placement, and add to cart. Ensured a responsive design using Tailwind CSS for a seamless user experience.",
     tags: ["React", "MongoDB", "Tailwind", "Express", "Node.js"],
     imageUrl: foodapp,
   },
   {
     title: "Filmi App",
     description:
-      " A movie api app with features like filtering, sorting and pagination. I was the front-end developer.",
-    tags: ["React","Tailwind"],
+      "Developed a movie web application that allows users to search for movies. Implemented a responsive design using CSS. Integrated API to fetch movie data and display it to users.",
+    tags: ["React","CSS", "OMDB API"],
     imageUrl: filmiapp,
   }
 ] as const;

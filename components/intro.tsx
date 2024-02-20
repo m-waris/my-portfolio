@@ -88,7 +88,7 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none  active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:hover:bg-black"
-          href="/muhammad-waris-mahmood.pdf"
+          href="/Muhammad Waris Mahmood"
           download
         >
           Download CV{" "}
