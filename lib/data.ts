@@ -51,7 +51,7 @@ export const experiencesData = [
     date: "Feb 2024 - Present",
   },
   {
-    title: "Web Development Inter",
+    title: "Web Development Intern",
     location: "Remote",
     company: "FastDev Labs",
     description:"Contributed to a client project, developing and maintaining React.js front-end components. " +

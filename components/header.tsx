@@ -14,7 +14,7 @@ export default function Header() {
     <header className="z-[999] relative">
       <motion.div
         className="fixed w-[26rem] left-1/2 h-[3.5rem] border border-black dark:border-zinc-500 border-opacity-40 bg-zinc-50 bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] bottom-6 sm:w-[30rem] rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
-        initial={{ y: 100, x: "-50%", opacity: 0 }} // Changed initial y value to move it from the bottom
+        initial={{ y: 100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
         transition={{
           type: "spring",
@@ -31,7 +31,7 @@ export default function Header() {
               <motion.li
                 className="h-3/4 flex items-center justify-center relative"
                 key={link.hash}
-                initial={{ y: 100, opacity: 0 }} // Changed initial y value to move it from the bottom
+                initial={{ y: 100, opacity: 0 }} 
                 animate={{ y: 0, opacity: 1 }}
               >
                 <Link

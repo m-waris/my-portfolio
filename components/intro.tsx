@@ -60,10 +60,11 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Waris.</span> I'm a
-        full-stack web developer.
-        I derive immense satisfaction from crafting web apps, with a specialized focus on
-        <span className="font-bold"> React & Next.js</span>
+       <span className=" tracking-wider font-black text-transparent bg-clip-text bg-gradient-to-br from-indigo-300 to-blue-900 animate-pulse ">WELCOME! </span>  <br /> I'm{" "}
+        <span className="font-bold italic">Waris</span>,
+        a passionate web developer dedicated to crafting exceptional digital experiences.
+        I blend creativity with functionality to deliver impactful websites.
+
       </motion.h1>
 
       <motion.div
@@ -88,7 +89,7 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none  active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:hover:bg-black"
-          href="/Muhammad Waris Mahmood"
+          href="/Muhammad-Waris-Mahmood.pdf"
           download
         >
           Download CV{" "}
