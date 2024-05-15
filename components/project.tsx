@@ -1,10 +1,10 @@
 "use client";
 
-
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { BsGithub } from "react-icons/bs";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -13,8 +13,9 @@ export default function Project({
   description,
   tags,
   imageUrl,
-}: ProjectProps) 
-{
+  githublink,
+
+}: ProjectProps) {
   const [ref, inView] = useInView({
     threshold: 0.5,
     triggerOnce: false
@@ -31,9 +32,9 @@ export default function Project({
     <motion.div
       ref={ref}
       animate={inView ? "visible" : "hidden"}
-        variants={variants}
-        exit="hidden"
-        transition={{ duration: 0.8, ease: "easeOut" }}
+      variants={variants}
+      exit="hidden"
+      transition={{ duration: 0.8, ease: "easeOut" }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
       <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative  hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
@@ -52,6 +53,16 @@ export default function Project({
               </li>
             ))}
           </ul>
+          <a 
+            href={githublink} 
+            className="mt-4 text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white/90 transition"
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <BsGithub className="inline-block mr-2" />
+          
+            
+          </a>
         </div>
 
         <Image
