@@ -49,7 +49,7 @@ export const experiencesData = [
     "Offered one-on-one assistance to students to address individual learning needs and challenges. "+
     "Graded assignments and quizzes to provide constructive feedback and track student progress. "+
     "Collaborated closely with instructors to create a supportive and engaging learning environment",
-    date: "Feb 2024 - Present",
+    date: "Feb 2024 - June 2024",
   },
   {
     title: "Web Development Intern",
@@ -67,7 +67,7 @@ export const experiencesData = [
 export const projectsData = [
   {
     title:'Portfolio Website',
-    description: 'Blog app with features user authentication, CRUD operations for blog posts, and a responsive design using Tailwind CSS. Achieved seamless integration of front-end and back-end functionalities.',
+    description: 'Portfolio website for clinet, who is graphic designer ad a book cover artist. The website showcases her art and services that she provieds alogwith her contact information',
     tags: ['Wordpress', 'Elementor', 'LiteSpeedCache', 'CustomeCode'],
     imageUrl: biadesign,
     githublink: '',
