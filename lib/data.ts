@@ -3,6 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaNodeJs, FaReact, FaWordpress } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import blogapp from "@/public/blogapp.jpeg";
+import biadesign from '@/public/Screenshot_8-10-2024_135755_biadesigns.com.jpeg'
 import filmiapp from "@/public/fimiapp.jpeg";
 import foodapp from "@/public/foodapp.jpeg";
 import fastdev from "@/public/fastdev.png";
@@ -65,11 +66,20 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title:'Portfolio Website',
+    description: 'Blog app with features user authentication, CRUD operations for blog posts, and a responsive design using Tailwind CSS. Achieved seamless integration of front-end and back-end functionalities.',
+    tags: ['Wordpress', 'Elementor', 'LiteSpeedCache', 'CustomeCode'],
+    imageUrl: biadesign,
+    githublink: '',
+    weburl:'https://biadesigns.com/',
+  },
+  {
     title:'Full Stack Blog App',
     description: 'Blog app with features user authentication, CRUD operations for blog posts, and a responsive design using Tailwind CSS. Achieved seamless integration of front-end and back-end functionalities.',
     tags: ['NextJs', 'MongoDB', 'Tailwind', 'Express', 'Node.js','NextAuth'],
     imageUrl: blogapp,
-    githublink: 'https://github.com/m-waris/full-stack-blog-app',
+    weburl:'',
+    githublink:'https://github.com/m-waris/full-stack-blog-app'
   },
   {
     title: "Food Delivery App",
@@ -78,6 +88,7 @@ export const projectsData = [
     tags: ["React", "MongoDB", "Tailwind", "Express", "Node.js"],
     imageUrl: foodapp,
     githublink: 'https://github.com/m-waris/food-delivery-app',
+    weburl:'',
   },
   {
     title: "Filmi App",
@@ -85,7 +96,9 @@ export const projectsData = [
       "Developed a movie web application that allows users to search for movies. Implemented a responsive design using CSS. Integrated API to fetch movie data and display it to users.",
     tags: ["React","CSS", "OMDB API"],
     imageUrl: filmiapp,
-    githublink: 'https://github.com/m-waris/filmiApp'
+    githublink: 'https://github.com/m-waris/filmiApp',
+    weburl:'',
+
   }
 ] as const;
 

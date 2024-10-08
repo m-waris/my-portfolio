@@ -4,7 +4,7 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsGlobe } from "react-icons/bs";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -14,6 +14,7 @@ export default function Project({
   tags,
   imageUrl,
   githublink,
+  weburl
 
 }: ProjectProps) {
   const [ref, inView] = useInView({
@@ -53,15 +54,21 @@ export default function Project({
               </li>
             ))}
           </ul>
+          {
+          
+          }
           <a 
-            href={githublink} 
+            href={weburl ? weburl : githublink} 
             className="mt-4 text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white/90 transition"
             target="_blank" 
             rel="noopener noreferrer"
           >
-            <BsGithub className="inline-block mr-2" />
-          
-            
+            {weburl ? (
+              <BsGlobe className="inline-block mr-2" />
+            ) : (
+              <BsGithub className="inline-block mr-2" />
+            )}
+            {weburl ? 'Visit Website' : 'View on GitHub'}
           </a>
         </div>
 
