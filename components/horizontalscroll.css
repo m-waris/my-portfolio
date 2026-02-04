@@ -1,38 +1,36 @@
-.scroller {
-    @apply w-[22rem] md:w-[300rem] lg:w-[400rem]
+@import "tailwindcss";
 
-  }
-  
-  .scroller__inner {
-    padding-block: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .scroller[data-animated="true"] {
-    overflow: hidden;
-    -webkit-mask: linear-gradient(
-      90deg,
+.scroller {
+  @apply w-88 md:w-1200 lg:w-1600
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg,
       transparent,
       white 20%,
       white 80%,
-      transparent
-    );
-    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-    
+      transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll 40s forwards linear infinite;
+}
+
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
   }
-  
-  .scroller[data-animated="true"] .scroller__inner {
-    width: max-content;
-    flex-wrap: nowrap;
-    animation: scroll 40s forwards linear infinite;
-  }
-  
-  
-  @keyframes scroll {
-    to {
-      transform: translate(calc(-50% - 0.5rem));
-    }
-  }
- 
+}

@@ -1,14 +1,13 @@
-import React from "react";
+"use client";
 import { FaPaperPlane } from "react-icons/fa";
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
-
+import { useFormStatus } from "react-dom";
 export default function SubmitBtn() {
   const { pending } = useFormStatus();
 
   return (
     <button
       type="submit"
-      className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-zinc-800 text-white rounded-full outline-none transition-all  hover:bg-black  "
+      className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-zinc-800 text-white rounded-full outline-none transition-all hover:bg-black disabled:scale-100 disabled:bg-opacity-65"
       disabled={pending}
     >
       {pending ? (

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useActionState } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -10,7 +10,20 @@ import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  // useActionState takes (action, initialState)
+  const [state, formAction] = useActionState<any, FormData>(sendEmail, {
+    data: null,
+    error: null,
+  });
 
+  // Handle Toasts based on state changes
+  useEffect(() => {
+    if (state.error) {
+      toast.error(state.error);
+    } else if (state.data) {
+      toast.success("Email sent successfully! 😊");
+    }
+  }, [state]);
   return (
     <motion.section
       id="contact"
@@ -41,16 +54,7 @@ export default function Contact() {
 
       <form
         className="mt-10 flex flex-col dark:text-white/90"
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-
-          if (error) {
-            toast.error(error);
-            return;
-          }
-
-          toast.success("Email sent successfully! 😊");
-        }}
+        action={formAction}
       >
         <input
           className="h-14 px-4 rounded-lg bg-transparent border "

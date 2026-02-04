@@ -1,9 +1,6 @@
-import React from "react";
 import {
   Html,
   Body,
-
-  Heading,
   Hr,
   Container,
   Preview,
@@ -26,15 +23,15 @@ export default function ContactFormEmail({
    
       <Preview>New message from your portfolio site</Preview>
       <Tailwind>
-        <Body className=" text-white">
+        <Body>
           <Container>
-            <Section className="bg-zinc-800 text-white shadow-md borderBlack my-10 px-10 py-4 rounded-xl">
+            <Section className="">
               <Text className="leading-tight">
                 You received the following message from the contact form:
               </Text>
-              <Text className=" text-xl">{message}</Text>
+              <Text className="text-xl">{message}</Text>
               <Hr />
-              <Text className=" text-lg ">The sender's email is: {senderEmail}</Text>
+              <Text className="text-lg">The sender's email is: {senderEmail}</Text>
             </Section>
           </Container>
         </Body>
