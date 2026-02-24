@@ -96,7 +96,7 @@ export const projectsData = [
     title: "Food Delivery App",
     description:
       "Developed a food delivery web application with features like user authentication, menu browsing, order placement, and add to cart. Ensured a responsive design using Tailwind CSS for a seamless user experience.",
-    tags: ["React", "MongoDB", "Tailwind", "Express", "Node.js"],
+    tags: ["Next Js", "Firebase", "Tailwind", "Shadcn UI"],
     imageUrl: foodapp,
     githublink: '',
     weburl: 'https://cravings-flame-nu.vercel.app/',
@@ -104,7 +104,7 @@ export const projectsData = [
   {
     title: 'Business Portfolio Website',
     description: 'Portfolio website for clinet, who are accountants. The website showcases their services and contact information and more',
-    tags: ['Wordpress', 'Elementor', 'LiteSpeedCache', 'CustomeCode'],
+    tags: ['Wordpress', 'Elementor', 'LiteSpeedCache', 'Custom Code'],
     imageUrl: taxcel,
     githublink: '',
     weburl: 'https://thetaxcel.com/',
@@ -112,7 +112,7 @@ export const projectsData = [
   {
     title: 'Personal Brand Portfolio Website',
     description: 'Portfolio website for clinet, who is graphic designer ad a book cover artist. The website showcases her art and services that she provieds alogwith her contact information',
-    tags: ['Wordpress', 'Elementor', 'LiteSpeedCache', 'CustomeCode'],
+    tags: ['Wordpress', 'Elementor', 'LiteSpeedCache', 'Custom Code'],
     imageUrl: biadesign,
     githublink: '',
     weburl: 'https://biadesigns.com/',

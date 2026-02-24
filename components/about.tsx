@@ -3,18 +3,26 @@
 import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
-  const { ref } = useSectionInView("About");
-
+  const [ref, inView] = useInView({
+    threshold: 0.5,
+    triggerOnce: false
+  });
   return (
     <motion.section
       ref={ref}
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={{
+        hidden: { filter: 'blur(20px)', opacity: 0 },
+        visible: { filter: 'blur(0px)', opacity: 1 }
+      }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       id="about"
     >
       <SectionHeading>About me</SectionHeading>

@@ -3,7 +3,8 @@
 import Image from "next/image";
 import waris from "./waris.jpg";
 import React from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from 'framer-motion';
+
 import Link from "next/link";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
@@ -12,24 +13,23 @@ import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
-  const { ref } = useSectionInView("Home", 0.5);
+  const { ref: sectionRef } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const text = "WELCOME! ";
   return (
     <section
-      ref={ref}
+      ref={sectionRef}
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="flex items-center justify-center">
         <motion.div
           className="flex justify-center items-center"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            type: "tween",
-            duration: 0.2,
-          }}
+          initial={{ filter: 'blur(20px)', opacity: 0 }}
+          animate={isInView ? { filter: 'blur(0px)', opacity: 1 } : {}}
+          transition={{ duration: 1.2 }}
         >
           <a
             className="bg-white/60 p-4 h-12 mt-8 mr-5 text-gray-700 hover:text-gray-950 hover:bg-white rounded-full  cursor-pointer  dark:bg-white/20 dark:text-white/90 dark:hover:bg-white/10 transition duration-300"
@@ -54,21 +54,39 @@ export default function Intro() {
           </a>
         </motion.div>
       </div>
+      <div className="flex space-x-1 justify-center mt-4">
+        <AnimatePresence>
+          {text.split('').map((char, i) => (
+            <motion.p
+              ref={ref}
+              key={i}
+              initial={{ opacity: 0, x: -18 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              exit="hidden"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="text-2xl text-center sm:text-4xl font-black tracking-tighter md:text-6xl md:leading-[4rem] text-transparent bg-clip-text bg-gradient-to-br from-slate-500 to-stone-500 opacity-50"
+            >
+              {char === ' ' ? <span>&nbsp;</span> : char}
+            </motion.p>
+          ))}
+        </AnimatePresence>
+      </div>
 
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-[2rem]"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+      <motion.h2
+        ref={ref}
+        initial={{ filter: 'blur(20px)', opacity: 0 }}
+        animate={isInView ? { filter: 'blur(0px)', opacity: 1 } : {}}
+        transition={{ duration: 1.2 }}
+        className="text-xl text-center sm:text-2xl font-bold tracking-tighter md:text-4xl md:leading-[4rem]"
       >
-       <span className=" tracking-wider font-black text-transparent bg-clip-text bg-gradient-to-br from-indigo-300 to-blue-900 animate-pulse ">WELCOME! </span>  <br /> I'm{" "}
+        I'm{" "}
         <span className="font-bold italic">Waris</span>,
         a passionate web developer dedicated to crafting exceptional digital experiences.
         I blend creativity with functionality to deliver impactful websites.
-
-      </motion.h1>
+      </motion.h2>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium mt-4"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -89,7 +107,7 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none  active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:hover:bg-black"
-          href="/Muhammad Waris Mahmood Resume.pdf"
+          href="/Waris - Resume.pdf"
           download
         >
           Download CV{" "}
