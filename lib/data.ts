@@ -96,7 +96,7 @@ export const projectsData = [
     title: "Food Delivery App",
     description:
       "Developed a food delivery web application with features like user authentication, menu browsing, order placement, and add to cart. Ensured a responsive design using Tailwind CSS for a seamless user experience.",
-    tags: ["Next Js", "Firebase", "Tailwind", "Shadcn UI"],
+    tags: ["Next Js", "Firebase", "Tailwind", "Shadcn UI", "Cloudinary"],
     imageUrl: foodapp,
     githublink: '',
     weburl: 'https://cravings-flame-nu.vercel.app/',
