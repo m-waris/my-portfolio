@@ -1,4 +1,4 @@
-import blogapp from "@/public/blogapp.jpeg";
+import blogapp from "@/public/webman.tech_.png";
 import biadesign from '@/public/Screenshot_8-10-2024_135755_biadesigns.com.jpeg'
 import taxcel from '@/public/thetaxcel.com_.png'
 import filmiapp from "@/public/fimiapp.jpeg";
@@ -39,6 +39,19 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Full Stack Developer",
+    location: "Remote",
+    company: "EBD",
+    description: "Developing a full-stack Kanban and ticket management platform using Next.js, Supabase, Zustand and Zod. " +
+      " Built analytics dashboards displaying ticket metrics, along with real-time recent activity tracking." +
+      " Integrated OpenAI APIs to provide AI-powered ticket comment suggestions and workflow assistance. " +
+      " Implemented authentication and session management using Supabase Auth with role-based access control. " +
+      " Developed organizations invite workflows enabling secure user onboarding and team collaboration. " +
+      " Designed and implemented a notification system for ticket updates and assignment events. " +
+      " Focused on scalable architecture, reusable components, and responsive user experience. ",
+    date: "Mar 2026 - Present",
+  },
+  {
     title: "Software Engineer",
     location: "Lahore",
     company: "Devsinc",
@@ -47,7 +60,7 @@ export const experiencesData = [
       " Designed intuitive dashboards that transformed complex datasets (scores, achievements, media) into clear UI experiences." +
       " Integrated Twilio SMS for real-time profile sharing and invitation flows." +
       " Focused on performance, responsiveness, and usability across desktop and mobile.",
-    date: "Jan 2025 - Present",
+    date: "Jan 2025 - Apr 2026",
   },
   {
     title: "Next.js Developer",
@@ -92,7 +105,15 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
-    {
+  {
+    title: 'Webman Tech - Personal Blog Website',
+    description: 'My personal blog website where I write about web development, programming, and technology.',
+    tags: ['NextJs', 'Sanity', 'Tailwind', 'Framer Motion'],
+    imageUrl: blogapp,
+    weburl: 'https://webman.tech/',
+    githublink: '',
+  },
+  {
     title: "Food Delivery App",
     description:
       "Developed a food delivery web application with features like user authentication, menu browsing, order placement, and add to cart. Ensured a responsive design using Tailwind CSS for a seamless user experience.",
@@ -102,7 +123,7 @@ export const projectsData = [
     weburl: 'https://cravings-flame-nu.vercel.app/',
   },
   {
-    title: 'Business Portfolio Website',
+    title: 'Business Portfolio for Client',
     description: 'Portfolio website for clinet, who are accountants. The website showcases their services and contact information and more',
     tags: ['Wordpress', 'Elementor', 'LiteSpeedCache', 'Custom Code'],
     imageUrl: taxcel,
@@ -110,21 +131,14 @@ export const projectsData = [
     weburl: 'https://thetaxcel.com/',
   },
   {
-    title: 'Personal Brand Portfolio Website',
+    title: 'Brand Portfolio for Client',
     description: 'Portfolio website for clinet, who is graphic designer ad a book cover artist. The website showcases her art and services that she provieds alogwith her contact information',
     tags: ['Wordpress', 'Elementor', 'LiteSpeedCache', 'Custom Code'],
     imageUrl: biadesign,
     githublink: '',
     weburl: 'https://biadesigns.com/',
   },
-  {
-    title: 'Full Stack Blog App',
-    description: 'Blog app with features user authentication, CRUD operations for blog posts, and a responsive design using Tailwind CSS. Achieved seamless integration of front-end and back-end functionalities.',
-    tags: ['NextJs', 'MongoDB', 'Tailwind', 'Express', 'Node.js', 'NextAuth'],
-    imageUrl: blogapp,
-    weburl: '',
-    githublink: 'https://github.com/m-waris/full-stack-blog-app'
-  },
+
   {
     title: "Filmi App",
     description:
