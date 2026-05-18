@@ -3,6 +3,7 @@ import biadesign from '@/public/Screenshot_8-10-2024_135755_biadesigns.com.jpeg'
 import taxcel from '@/public/thetaxcel.com_.png'
 import filmiapp from "@/public/fimiapp.jpeg";
 import foodapp from "@/public/cravings-flame-nu.vercel.app_.png";
+import gymapp from "@/public/gym.png";
 import fastdev from "@/public/fastdev.png";
 import wordpress from "@/public/wordpress.jpg";
 import react from "@/public/react.jpg";
@@ -11,8 +12,6 @@ import html from "@/public/html.jpg";
 import intern from "@/public/Intern Certificate.jpg";
 import numpy from "@/public/numpy.jpg";
 import data from "@/public/Data Manipulation in SQL.jpg";
-
-import { FaCircle } from "react-icons/fa6";
 
 export const links = [
   {
@@ -123,6 +122,15 @@ export const projectsData = [
     weburl: 'https://cravings-flame-nu.vercel.app/',
   },
   {
+    title: "Gym Website",
+    description:
+      "Developed a gym website with features like class schedules, trainer information, and membership plans. Implemented a responsive design using Tailwind CSS for a seamless user experience.",
+    tags: ["Next Js", "Tailwind", "Framer Motion", "Cursor"],
+    imageUrl: gymapp,
+    githublink: '',
+    weburl: 'https://gym-project-by-waris.netlify.app/',
+  },
+  {
     title: 'Business Portfolio for Client',
     description: 'Portfolio website for clinet, who are accountants. The website showcases their services and contact information and more',
     tags: ['Wordpress', 'Elementor', 'LiteSpeedCache', 'Custom Code'],
@@ -209,6 +217,11 @@ export const certificatesData = [
     title: "Numpy",
     imageUrl: numpy,
     date: "2023",
-  }
+  },
+  {
+    title: "Software Engineer Intern",
+    imageUrl: intern,
+    date: "2024",
+  },
 
 ] as const;
