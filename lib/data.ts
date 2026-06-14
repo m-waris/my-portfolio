@@ -12,6 +12,8 @@ import html from "@/public/html.jpg";
 import intern from "@/public/Intern Certificate.jpg";
 import numpy from "@/public/numpy.jpg";
 import data from "@/public/Data Manipulation in SQL.jpg";
+import claude from "@/public/claude101.jpg";
+import mcp from "@/public/mcp.jpg";
 
 export const links = [
   {
@@ -40,7 +42,7 @@ export const experiencesData = [
   {
     title: "Full Stack Developer",
     location: "Remote",
-    company: "EBD",
+    company: "EBS",
     description: "Developing a full-stack Kanban and ticket management platform using Next.js, Supabase, Zustand and Zod. " +
       " Built analytics dashboards displaying ticket metrics, along with real-time recent activity tracking." +
       " Integrated OpenAI APIs to provide AI-powered ticket comment suggestions and workflow assistance. " +
@@ -165,6 +167,7 @@ export const skillsData = [
   "Tailwind",
   "Bootstrap",
   "JavaScript",
+  "TypeScript",
   "React.js",
   "Next.js",
   "Node.js",
@@ -172,17 +175,31 @@ export const skillsData = [
   "Git",
   "Github",
   "Redux",
+  "Zustand",
+  "Framer Motion",
+  "Shadcn UI",
   "MongoDB",
   "Firebase",
   "SQL",
   "MySQL",
   "PostgreSQL",
+  "Supabase",
   "RESTful APIs",
   "Responsive Design",
 
 ] as const;
 
 export const certificatesData = [
+  {
+    title: "Claude 101",
+    imageUrl: claude,
+    date: "2026",
+  },
+  {
+    title: "Introduction to MCP",
+    imageUrl: mcp,
+    date: "2026",
+  },
   {
     title: "Web Development Intern",
     imageUrl: fastdev,
